@@ -1,0 +1,93 @@
+import gin.torch.external_configurables
+import trax
+from trax import layers as tl
+import trax.supervised.lr_schedules as trax2
+from trax.supervised import training
+
+# Parameters for optimizers.Adam:
+# ==============================================================================
+optimizers.Adam.b1 = 0.9
+optimizers.Adam.b2 = 0.999
+optimizers.Adam.clip_grad_norm = None
+optimizers.Adam.eps = 1e-05
+optimizers.Adam.learning_rate = 0.0001
+optimizers.Adam.weight_decay_rate = 1e-05
+
+# Parameters for backend:
+# ==============================================================================
+backend.name = 'jax'
+
+# Parameters for BatchNorm:
+# ==============================================================================
+BatchNorm.axis = (0, 1, 2)
+BatchNorm.center = True
+BatchNorm.epsilon = 1e-05
+BatchNorm.mode = 'train'
+BatchNorm.momentum = 0.999
+BatchNorm.scale = True
+
+# Parameters for build_vocab:
+# ==============================================================================
+build_vocab.oov = '<OOV>'
+build_vocab.pad = '<PAD>'
+
+# Parameters for CategoryCrossEntropy:
+# ==============================================================================
+CategoryCrossEntropy.label_smoothing = None
+
+# Parameters for debug_pipeline:
+# ==============================================================================
+debug_pipeline.debug = False
+debug_pipeline.log_prefix = None
+debug_pipeline.method = 'pow'
+
+# Parameters for EvalTask:
+# ==============================================================================
+EvalTask.export_prefix = None
+EvalTask.metric_names = None
+EvalTask.sample_batch = None
+
+# Parameters for multifactor:
+# ==============================================================================
+# None.
+
+# Parameters for Preprocessor:
+# ==============================================================================
+# None.
+
+# Parameters for RMSProp:
+# ==============================================================================
+RMSProp.clip_grad_norm = None
+RMSProp.eps = 1e-08
+RMSProp.gamma = 0.9
+RMSProp.learning_rate = 0.001
+
+# Parameters for optimizers.SGD:
+# ==============================================================================
+optimizers.SGD.clip_grad_norm = None
+optimizers.SGD.learning_rate = 0.01
+
+# Parameters for TrainTask:
+# ==============================================================================
+TrainTask.export_prefix = None
+TrainTask.loss_name = None
+TrainTask.n_steps_per_checkpoint = 100
+TrainTask.n_steps_per_permanent_checkpoint = None
+TrainTask.sample_batch = None
+
+# Parameters for Trax_Basemodel:
+# ==============================================================================
+# None.
+
+# Parameters for warmup_and_rsqrt_decay:
+# ==============================================================================
+# None.
+
+# Parameters for WeightedCategoryAccuracy:
+# ==============================================================================
+# None.
+
+# Parameters for WeightedCategoryCrossEntropy:
+# ==============================================================================
+WeightedCategoryCrossEntropy.cutoff = 0.0
+WeightedCategoryCrossEntropy.label_smoothing = None

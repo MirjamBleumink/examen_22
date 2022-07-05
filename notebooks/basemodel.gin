@@ -1,0 +1,11 @@
+import gin.torch.external_configurables
+from trax import layers as tl
+import trax.supervised.lr_schedules 
+from trax.supervised import training
+import trax
+
+#training.TrainTask.optimizer = @trax.optimizers.Adam()
+#training.TrainTask.lr_schedule = 1e-3
+#training.EvalTask.n_eval_batches = 25
+
+
